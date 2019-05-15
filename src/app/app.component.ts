@@ -11,12 +11,13 @@ import { isRootView } from '@angular/core/src/render3/util';
 
 export class AppComponent {
   @HostListener('document:keyup', ['$event'])
+
+  // must define listeners before other functions
   handleKeyboardEvent(event: KeyboardEvent) {
     if (event.key == "Escape") {
       this.tooltips.map((item, index) => item.visible = false)
     }
   }
-
 
   tooltips: Tooltip[] = [
     { id: "btn1", text: "1", visible: false },
@@ -24,7 +25,6 @@ export class AppComponent {
   ]
   
   title = 'myapp';
-
 
   toggle(e, id) {
     this.tooltips.map((item, index) => {
