@@ -9,18 +9,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TooltipComponent implements OnInit {
 
   @Input() text: string
-  toggleTooltip: boolean = false
+  @Input() visible: boolean
+  // toggleTooltip: boolean = false
   @Input() buttonIdx: string
   
   constructor() { }
-
-  ngOnInit() {
-    // console.log(tooltip)
-  }
-
-  toggle(e, idx) {
-    this.toggleTooltip = !this.toggleTooltip
-    console.log(e, idx)
-  }
 
 }
