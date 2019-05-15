@@ -20,7 +20,7 @@ export class TooltipComponent implements OnInit {
 
   toggle(e, idx) {
     this.toggleTooltip = !this.toggleTooltip
-    // console.log(this.toggleTooltip)
+    console.log(e, idx)
   }
 
 }

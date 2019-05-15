@@ -12,13 +12,15 @@ export class AppComponent {
   selectedTooltip: string
 
   tooltips: Tooltip[] = [
-    { id: "btn1", text: "first tooltip", isVisible: false },
-    { id: "btn2", text: "second tooltip", isVisible: false }
+    { id: "btn1", text: "1", isVisible: false },
+    { id: "btn2", text: "2", isVisible: false }
   ]
   
   title = 'myapp';
 
-  toggleOthers() {
+  toggle(e, idx) {
     
+    this.toggleTooltip = !this.toggleTooltip
+    // console.log(this.toggleTooltip)
   }
 }

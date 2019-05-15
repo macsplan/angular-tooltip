@@ -1,5 +1,5 @@
 <div class="custom-tooltip" [ngClass]="{'hidden': toggleTooltip === false}">
-  say - {{text}}
+  button {{text}} was clicked
 </div>
 
-<button class="btn btn-primary" id={{buttonIdx}} (click)="toggle($event, buttonIdx)">Toggle</button>
+<button class="btn btn-primary" id={{buttonIdx}} (click)="toggle($event, buttonIdx)">Button {{text}}</button>
