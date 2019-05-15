@@ -15,4 +15,8 @@ export class TooltipComponent implements OnInit {
   
   constructor() { }
 
+  ngOnInit() {
+    
+  }
+
 }
