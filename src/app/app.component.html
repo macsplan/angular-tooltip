@@ -5,8 +5,8 @@
   </h1>
 </div>
 
-<app-tooltip tooltip="choo choo mutherfuckers!!!"></app-tooltip>
-
-<app-tooltip tooltip="watch out i have no brakes!!!"></app-tooltip>
+<div *ngFor="let item of tooltips">
+  <app-tooltip [id]="item.id" [buttonIdx]="item.id" [text]="item.text"></app-tooltip>
+</div>
 
 <router-outlet></router-outlet>

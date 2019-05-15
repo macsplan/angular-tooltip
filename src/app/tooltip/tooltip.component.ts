@@ -8,18 +8,19 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class TooltipComponent implements OnInit {
 
-  @Input() tooltip: string
+  @Input() text: string
   toggleTooltip: boolean = false
-
+  @Input() buttonIdx: string
+  
   constructor() { }
 
   ngOnInit() {
     // console.log(tooltip)
   }
 
-  toggle() {
+  toggle(e, idx) {
     this.toggleTooltip = !this.toggleTooltip
-    console.log(this.toggleTooltip)
+    // console.log(this.toggleTooltip)
   }
 
 }
