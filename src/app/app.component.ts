@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { HostListener } from '@angular/core'
 import { Tooltip } from './tooltip'
 import { isRootView } from '@angular/core/src/render3/util';
 
@@ -9,7 +10,13 @@ import { isRootView } from '@angular/core/src/render3/util';
 })
 
 export class AppComponent {
-  selectedTooltip: string
+  @HostListener('document:keyup', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (event.key == "Escape") {
+      this.tooltips.map((item, index) => item.visible = false)
+    }
+  }
+
 
   tooltips: Tooltip[] = [
     { id: "btn1", text: "1", visible: false },
@@ -17,6 +24,7 @@ export class AppComponent {
   ]
   
   title = 'myapp';
+
 
   toggle(e, id) {
     this.tooltips.map((item, index) => {
