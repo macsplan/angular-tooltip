@@ -10,13 +10,12 @@ export class TooltipComponent implements OnInit {
 
   @Input() text: string
   @Input() visible: boolean
-  // toggleTooltip: boolean = false
   @Input() buttonIdx: string
   
   constructor() { }
 
   ngOnInit() {
-    
+
   }
 
 }

@@ -27,12 +27,10 @@ export class AppComponent {
     { id: "btn2", text: "2", visible: false }
   ]
   
-  
-
   toggle(e, id) {
     this.tooltips.map((item, index) => {
       if (item.id === id) {
-        item.visible = true
+        item.visible = !item.visible
       } else {
         item.visible = false
       }
