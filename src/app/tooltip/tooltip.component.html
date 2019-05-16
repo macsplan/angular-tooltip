@@ -1,5 +1,5 @@
-<div class="custom-tooltip" [ngClass]="{'hidden': visible === false}">
-  button {{text}} was clicked
+<div class="custom-tooltip bounce" [ngClass]="{'hidden': visible === false}">
+  Button {{text}} was Clicked !!!
 </div>
 
-<button class="btn btn-primary" id={{buttonIdx}}>Button {{text}}</button>
+<button class="btn btn-primary" attr.aria-label={{buttonIdx}} id={{buttonIdx}}>Button {{text}}</button>

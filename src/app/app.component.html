@@ -1,12 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div class="inner-container" style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
+  <div class="row">
+    <div *ngFor="let item of tooltips" class="col-xs-12 col-md-6 button-column">
+        <app-tooltip [id]="item.id" [buttonIdx]="item.id" [text]="item.text" [visible]="item.visible" (keydown.enter)="toggle(e, item.id)" (click)="toggle(e, item.id)"> </app-tooltip>
+    </div>
+  </div>
 </div>
 
-<div *ngFor="let item of tooltips">
-  <app-tooltip [id]="item.id" [buttonIdx]="item.id" [text]="item.text" [visible]="item.visible" (click)="toggle(e, item.id)"> </app-tooltip>
-</div>
+
 
 <router-outlet></router-outlet>

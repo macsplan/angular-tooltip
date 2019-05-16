@@ -10,6 +10,9 @@ import { isRootView } from '@angular/core/src/render3/util';
 })
 
 export class AppComponent {
+
+  title = 'my Tooltip App';
+
   @HostListener('document:keyup', ['$event'])
 
   // must define listeners before other functions
@@ -24,7 +27,7 @@ export class AppComponent {
     { id: "btn2", text: "2", visible: false }
   ]
   
-  title = 'myapp';
+  
 
   toggle(e, id) {
     this.tooltips.map((item, index) => {
